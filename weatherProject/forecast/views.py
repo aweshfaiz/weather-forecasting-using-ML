@@ -13,15 +13,8 @@ from sklearn.metrics import mean_squared_error
 from datetime import datetime, timedelta
 import pytz
 import os
-from pathlib import Path
-from django.conf import settings
-from dotenv import load_dotenv
 
-# Load environment variables from repo root .env if present
-load_dotenv(dotenv_path=(Path(settings.BASE_DIR).parent / '.env'))
-
-# API key for OpenWeatherMap
-API_KEY = os.getenv('API_KEY')
+API_KEY = '049c8956c4a78881b6713ae15b54d6a0'
 BASE_URL = 'https://api.openweathermap.org/data/2.5/'
 
 def get_current_weather(city):
